@@ -37,17 +37,6 @@
         tosUrl: '<your-tos-url>'
       };
 
-	firebase.auth().onAuthStateChanged(function(user) {
- 	 if (user) {
-     'https://the-rebooted-coder.github.io/Take-Notes/'
- 	 }
- 	  else
- 	  {
-    	"No"
- 	 	}
-			});
-
-
       // Initialize the FirebaseUI Widget using Firebase.
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       // The start method will wait until the DOM is loaded.
