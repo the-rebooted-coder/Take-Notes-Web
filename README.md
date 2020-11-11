@@ -2,7 +2,7 @@
 
 ___
 <p align="center">
-  <img src="https://i.ibb.co/Jv7ChLQ/Untitled-design.png" width="300" heigth="300"\>
+  <img src="img src="https://i.ibb.co/7Xp5p4m/TN-Web-Icon-1.png" width="300" heigth="300"\>
 </p>
 
 <p align="center">
