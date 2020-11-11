@@ -1,0 +1,10 @@
+body {
+    background: url(./SignUp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'Product Sans Bold';
+    src: url(./Product\ Sans\ Bold\ 700.ttf);
+  }
