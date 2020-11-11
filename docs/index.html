@@ -20,9 +20,8 @@
   };
   firebase.initializeApp(config);
   firebase.analytics();
-</script> 
-    
-    
+</script>     
+   
     <!-- Now TO Sign-->
     <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
@@ -38,15 +37,25 @@
         tosUrl: '<your-tos-url>'
       };
 
+	firebase.auth().onAuthStateChanged(function(user) {
+ 	 if (user) {
+     'https://the-rebooted-coder.github.io/Take-Notes/'
+ 	 }
+ 	  else
+ 	  {
+    	"No"
+ 	 	}
+			});
+
+
       // Initialize the FirebaseUI Widget using Firebase.
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-    <div></div>
+    <div>
+    </div>
   <body>
-    <!-- The surrounding HTML is left untouched by FirebaseUI.
-         Your app may use that space for branding, controls and other customizations.-->
     <center>
       <h1 style="font-family: Product Sans Bold;">Welcome to Take Notes!</h1>
     </center>     
