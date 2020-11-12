@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#535353" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="author" content="Spandan Saxena" />
+    <meta name="copyright" content="Spandan Saxena" />
+    <meta name="robots" content="follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Take Notes" />
+    <title>Settings | Take Notes</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Homemade+Apple|Roboto|Caveat|Liu+Jian+Mao+Cao&display=swap"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/features.css" />
+</head>
+<body>
+    <main>
+        <button
+        aria-label="Activate Dark Mode"
+        title="Toggle Dark Mode"
+        aria-pressed="false"
+        onclick="toggleTheme(this)"
+        class="dark-mode-toggle"
+      >
+        <span class="sun">
+          <img
+            alt="sun icon that represents light mode"
+            width="35px"
+            src="images/Diya_on.svg"
+        /></span>
+        <span class="moon"
+          ><img
+            alt="moon icon to represent dark mode "
+            width="25px"
+            src="images/Diya_off_white.svg"
+        /></span>
+      </button>
+      <h1>Settings & More! &#x2699;</h1>
+      <section style="font-size: 1rem; padding: 20px 0px;">
+        <center>
+            <div class="setting_btn">
+                <a href="https://key-a-byte.typeform.com/to/gvGml3FW"><button style="padding-right: 100px; padding-left: 100px;">Request a Feature &#x1F4A1;</button></a><br><br><br>
+                <a href="./devs.html"><button style="padding-right: 125px; padding-left: 125px;">Developers &#x1F5A5;</button></a><br><br><br>
+                <a href="#"><button style="padding-right: 125px; padding-left: 125px;">My Profile &#x1F511;</button></a><br><br><br>
+                <a href="./Privacy.html"><button style="padding-right: 115px; padding-left: 115px;">Privacy Policy &#x1F512;</button></a><br><br><br>
+            </div>  
+        </center>  
+      </section>
+      <!-- Diwali Special Icon --> 
+    <img src="./images/Diwali_Img.png" alt=""
+    width="100"
+    height="100"
+    viewBox="0 0 250 250"
+    style="
+      position: absolute;
+      top: 0;
+      border: 0;
+      right: 0;
+    "
+    aria-hidden="true">
+    </main>
+    <script
+      src="./js/vendors/html2canvas.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/app.mjs"></script>
+    <script defer src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
+    <script>
+      function toggleTheme(toggleButton) {
+        if (document.body.classList.contains('dark')) {
+          document.body.classList.add('fade-in-light');
+          document.body.classList.remove('dark');
+          document.body.classList.remove('fade-in-dark');
+          window.localStorage.setItem('prefers-theme', 'light');
+          if (toggleButton) {
+            toggleButton.setAttribute('aria-pressed', false);
+            toggleButton.setAttribute('aria-label', 'Activate Dark Mode');
+          }
+        } else {
+          document.body.classList.add('fade-in-dark');
+          document.body.classList.add('dark');
+          document.body.classList.remove('fade-in-light');
+          window.localStorage.setItem('prefers-theme', 'dark');
+          if (toggleButton) {
+            toggleButton.setAttribute('aria-pressed', true);
+            toggleButton.setAttribute('aria-label', 'Activate Light Mode');
+          }
+        }
+      }
+
+      const localPreference = window.localStorage.getItem('prefers-theme');
+      if (localPreference) {
+        if (localPreference === 'light') document.body.classList.remove('dark');
+        else document.body.classList.add('dark');
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+    </script>
+</body>
+</html>
