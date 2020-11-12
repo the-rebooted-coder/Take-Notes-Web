@@ -5,6 +5,7 @@ firebase.auth().onAuthStateChanged(function(user) {
  	 }
  	  else
  	  {
-    	//Dispay an error page or reload the same page again
+    	//User not Signed Do Nothing
+    	//Keep this for future condtions
  	 	}
 			});
