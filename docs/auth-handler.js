@@ -6,6 +6,5 @@ firebase.auth().onAuthStateChanged(function(user) {
  	  else
  	  {
     	//Dispay an error page or reload the same page again
-          window.location = "index.html";
  	 	}
 			});
