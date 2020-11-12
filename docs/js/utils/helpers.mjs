@@ -46,7 +46,7 @@ function formatText(event) {
   event.preventDefault();
   const text = event.clipboardData
     .getData('text/plain')
-    .replace(/\n/g, '<br/>');
+    .replace(/<br>/g, '<br/>');
   document.execCommand('insertHTML', false, text);
 }
 
