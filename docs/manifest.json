@@ -1,6 +1,6 @@
 {
-  "name": "text-to-handwriting",
-  "short_name": "text-to-handwriting",
+  "name": "take-notes-web",
+  "short_name": "take-notes-web",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
