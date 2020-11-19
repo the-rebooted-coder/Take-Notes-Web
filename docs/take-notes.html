@@ -58,6 +58,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Homemade+Apple|Roboto|Caveat|Liu+Jian+Mao+Cao&display=swap"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/features.css" />
   </head>
@@ -383,9 +385,41 @@
       </button><br><br>
        <p>
         <!-- <strong>Accounts and Other</strong> &#x1F4F1; <br><br> -->
-        <button class="imp-button">
+        <!-- <button class="imp-button">
           <a href="https://the-rebooted-coder.github.io/Take-Notes-Web/settings">Settings & More &#x2699;</a>
+        </button><br> -->
+
+        <!-- Button trigger modal -->
+        <button type="button" class="imp-button" data-toggle="modal" data-target="#exampleModalCenter">
+          Settings & More &#x2699;
         </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header"  style="background-color: var(--background-primary);">
+                <h5 class="modal-title" id="exampleModalLongTitle" style="color: #fff;">Settings & More &#x2699;</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" style="background-color: var(--background-primary);">
+                  <ul>
+                    <a href="https://key-a-byte.typeform.com/to/gvGml3FW"><button class="btn-block">Request a Feature &#x1F4A1;</button></a><br>
+                    <a href="./devs.html"><button class="btn-block">Developers &#x1F5A5;</button></a><br>
+                    <a href="./gettakenotes.html"><button class="btn-block">Take Notes for Android &#x1F4F1;</button></a><br>
+                    <a href="./Privacy.html"><button class="btn-block">Privacy Policy &#x1F512;</button></a><br>
+                    <a href="./tutorial.html"><button class="btn-block">Take Notes Tutorial &#x2705;</button></a>
+                  </ul>
+              </div>
+              <div class="modal-footer"  style="background-color: var(--background-primary);">
+                <button type="button" class="imp-button" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       <!-- modal end  -->
     </footer>
 
     <!-- Fixed Elements -->
@@ -488,5 +522,7 @@
         document.body.classList.add('dark');
       }
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   </body>
 </html>
