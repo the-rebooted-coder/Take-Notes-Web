@@ -9,6 +9,67 @@
       gtag('js', new Date());
       gtag('config', 'UA-125454191-4');
     </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-messaging.js"></script>
+   <script>
+    var firebaseConfig = {
+       apiKey: "AIzaSyBnGT7GqWAHz50m39I3_WgIiKlLCWPixdE",
+    authDomain: "take-notes-7efb5.firebaseapp.com",
+    databaseURL: "https://take-notes-7efb5.firebaseio.com",
+    projectId: "take-notes-7efb5",
+    storageBucket: "take-notes-7efb5.appspot.com",
+    messagingSenderId: "720040417053",
+    appId: "1:720040417053:web:91a9c50654844f5339f3f4",
+    measurementId: "G-W8YZF96TCF"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const messaging=firebase.messaging();
+
+    function IntitalizeFireBaseMessaging() {
+        messaging
+            .requestPermission()
+            .then(function () {
+                console.log("Notification Permission");
+                return messaging.getToken();
+            })
+            .then(function (token) {
+                console.log("Token : "+token);
+                document.getElementById("token").innerHTML=token;
+            })
+            .catch(function (reason) {
+                console.log(reason);
+            });
+    }
+
+    messaging.onMessage(function (payload) {
+        console.log(payload);
+        const notificationOption={
+            body:payload.notification.body,
+            icon:payload.notification.icon
+        };
+
+        if(Notification.permission==="granted"){
+            var notification=new Notification(payload.notification.title,notificationOption);
+
+            notification.onclick=function (ev) {
+                ev.preventDefault();
+                window.open(payload.notification.click_action,'_blank');
+                notification.close();
+            }
+        }
+
+    });
+    messaging.onTokenRefresh(function () {
+        messaging.getToken()
+            .then(function (newtoken) {
+                console.log("New Token : "+ newtoken);
+            })
+            .catch(function (reason) {
+                console.log(reason);
+            })
+    })
+    IntitalizeFireBaseMessaging();
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#535353" />
