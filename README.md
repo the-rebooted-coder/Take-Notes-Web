@@ -32,7 +32,7 @@ ___
 
 ## :information_source: About
 
-It is the Desktop Web Application that Converts Text to Handwriting that looks and feels same as the text written by hand.
+It is the Desktop Web Application inspired from the native Android App that Converts Text to Handwriting that looks and feels same as the text written by hand.
 
 ## :interrobang: Reason
 
