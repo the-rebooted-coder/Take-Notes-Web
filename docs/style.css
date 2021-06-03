@@ -1,5 +1,5 @@
 body {
-    background: url(./SignUp.png);
+    background: url(./Assets/login_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -7,4 +7,37 @@ body {
 @font-face {
     font-family: 'Product Sans Bold';
     src: url(./Product\ Sans\ Bold\ 700.ttf);
-  }
+}
+
+.signup-card {
+    display: flex;
+    height: 500px;
+    width: 800px;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    border-radius: 30px;
+
+    /* Blur */
+    /* position: absolute;
+    background: rgba(192, 182, 182, 0.384);
+    backdrop-filter: blur(5px); */
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(27, 189, 135, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.sign-head {
+    font-family: "Product Sans Bold"; 
+    text-shadow: 3px 3px 8px rgba(27, 189, 135, 0.507);
+    color: white;
+}

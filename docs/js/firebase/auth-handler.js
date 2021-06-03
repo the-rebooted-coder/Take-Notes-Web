@@ -7,5 +7,5 @@ firebase.auth().onAuthStateChanged(function(user) {
  	  {
     	//User not Signed Do Nothing
     	//Keep this for future condtions
- 	 	}
-			});
+ 	}
+	});
