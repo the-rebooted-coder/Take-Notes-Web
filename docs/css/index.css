@@ -14,7 +14,7 @@ body {
   --primary-button-bg: linear-gradient(to right, #695997, #654ea3);
   --primary-button-color: #fff;
   --box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  --toggle-bg: #454545;
+  --toggle-bg: #654ea3;
 }
 body.dark {
   /* --background-primary: linear-gradient(to bottom, #654ea3, #eaafc8);  */
@@ -27,7 +27,7 @@ body.dark {
   --primary-button-bg: linear-gradient(to right, #695997, #654ea3);
   --primary-button-color: #fff;
   --box-shadow: 0 8px 32px 0 rgba(241, 203, 203, 0.267);
-  --toggle-bg: #454545;
+  --toggle-bg: #654ea3;
 }
 @font-face {
   font-family: 'Hindi_Font';
