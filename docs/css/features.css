@@ -3,6 +3,7 @@
   cursor: pointer;
   position: absolute;
   box-shadow: none;
+  display: none;
   top: 10px;
   right: 10px;
   border: none;

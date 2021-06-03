@@ -149,15 +149,14 @@
           src="images/Dark.png"
       /></span>
       </button>
-      <h1 class="land-head">Take Notes Web</h1>
       <section class="generate-image-section">
         <form id="generate-image-form">
           <!-- Generate Image Section -->
           <div class="display-flex output-grid responsive-flex">
             <div class="flex-1 page-container-super">
               <div>
-                <h4>Your Text Goes Here</h4>
-                <label class="block" for="note">Type or Paste text here and see changes in real-time!</label>
+                <!-- <h4>Your Text Goes Here</h4>
+                <label class="block" for="note">Type or Paste text here and see changes in real-time!</label> -->
               </div>
 
               <div class="flex-1 page-container">
@@ -166,7 +165,7 @@
                   <div class="display-flex left-margin-and-content">
                     <div contenteditable="true" class="left-margin"></div>
                     <div class="paper-content" id="note" contenteditable="true">
-                       No Pressures, No Diamonds.
+                       Welcome to Take Notes Web.
                     </div>
                   </div>
                   <div class="overlay"></div>
@@ -188,12 +187,7 @@
             <div class="customization-col">
               <!-- Handwriting Font -->
               <div style="padding: 5px 0px 5px 0px;">
-                <b>Details</b> <small>(Optional)</small>
-                <p style="font-size: 0.8rem;">
-                  <em
-                    >Note: 'Effects' applied will be only visible when you tap 'Create Assignment'</em
-                  >
-                </p>
+                <b>Page Settings</b>
               </div>
               <fieldset class="glass-ui">
                 <legend>Handwriting</legend>
@@ -279,7 +273,7 @@
 
               <!-- Pen ink color, Font size, Vertical position text, Word Spacing -->
               <fieldset class="glass-ui">
-                <legend>Page & Text Options</legend>
+                <legend>Page & Margin Settings</legend>
 
                 <div class="category-grid">
                   <div class="postfix-input" data-postfix="pt">
@@ -327,7 +321,7 @@
                 </div>
               </fieldset>
 
-              <fieldset class="glass-ui">
+              <fieldset class="glass-ui" style="display: none;">
                 <legend>Spacing Options</legend>
 
                 <div class="category-grid">
@@ -349,7 +343,6 @@
               <!-- Letter spacing, Paper Margin, Paper Lines, Paper Curvature -->
               <fieldset class="glass-ui">
                 <legend>Margin & Line Options</legend>
-
                 <div class="category-grid">
                   <div>
                     <label for="paper-margin-toggle"
@@ -416,7 +409,7 @@
                   type="submit"
                   data-testid="generate-image-button"
                   class="button generate-image-button">
-                Create Assignment
+                Create Notes
                 </button>
               </div>
             </div>
@@ -428,7 +421,7 @@
       <section>
         <h4 id="output-header">Output</h4>
         <div id="output" class="output glass-ui" style="color: #fff; text-align: center; overflow-wrap: break-word;">
-          Click the "Create Assignment" Button.
+          Click the "Create Notes" Button.
         </div>
         <div style="text-align: center; padding: 30px;">
           <button class="imp-button" id="download-as-pdf-button">
