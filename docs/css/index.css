@@ -202,7 +202,7 @@ select {
   background: url('../images/dropdown.svg') no-repeat;
   background-position: calc(100% - 14px) center;
   border: none;
-  color: #333;
+  color: #fff;
   border-radius: 4px;
   font-size: 0.9rem;
   display: block;
@@ -211,7 +211,8 @@ select {
 }
 
 option {
-  color: #333;
+  background-color: #464144;
+  color: #fff;
 }
 
 body.dark select {
