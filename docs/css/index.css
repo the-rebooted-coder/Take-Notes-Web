@@ -119,6 +119,22 @@ body.dark {
 }
 
 @font-face {
+  font-family: "Trinity Knot";
+  src: url(../fonts/Trinity\ Knot.ttf);
+}
+
+@font-face {
+  font-family: "Blue Meth";
+  src: url(../fonts/Blue\ Meth.ttf);
+}
+
+@font-face {
+  font-family: "Frostbite";
+  src: url(../fonts/frostbite.otf);
+}
+
+/* Default Font */
+@font-face {
   font-family: "PSBold";
   src: url(../Product\ Sans\ Bold\ 700.ttf);
 }
