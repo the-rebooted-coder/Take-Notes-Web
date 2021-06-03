@@ -22,7 +22,7 @@ body.dark {
   --font-color-primary: #fff;
   --elevation-background: #454545;
   --link-color: #09f;
-  --label-color: #aaa;
+  --label-color: #fff;
   --field-borders: white;
   --primary-button-bg: linear-gradient(to right, #695997, #654ea3);
   --primary-button-color: #fff;
@@ -496,6 +496,7 @@ input[type='file']::before {
 }
 .postfix-input label {
   display: block;
+  color: #fff;
   margin-bottom: 5px;
 }
 
