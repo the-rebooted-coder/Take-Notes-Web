@@ -152,6 +152,24 @@ body {
   font-family: "PSBold";
 }
 
+/* Scrollbar CSS */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #464646;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #19112E;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+  background-position: right center;
+}  
+
 a {
   text-decoration: none;
   color: var(--link-color);
